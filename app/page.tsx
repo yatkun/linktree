@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchLinks() {
       setLoading(true);
-      const res = await fetch("http://localhost:8001/api/links", { cache: "no-store" });
+      const res = await fetch("https://portal.fmipa.unsulbar.ac.id/api/links", { cache: "no-store" });
       const json = await res.json();
       // Filter hanya yang aktif dan urutkan
       setLinks((json.data || []).filter((l: Link) => l.is_active).sort((a: Link, b: Link) => a.order - b.order));

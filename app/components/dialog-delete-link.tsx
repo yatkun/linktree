@@ -21,7 +21,7 @@ export default function DialogDeleteLink({ link, onDeleted }: { link: { id: numb
   const handleDelete = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8001/api/links/${link.id}`, {
+      const response = await fetch(`https://portal.fmipa.unsulbar.ac.id/api/links/${link.id}`, {
         method: "DELETE",
       });
       if (!response.ok) {

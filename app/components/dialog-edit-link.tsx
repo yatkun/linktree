@@ -35,7 +35,7 @@ export default function DialogEditLink({ link, onEdited }: { link: { id: number;
         ...formData,
         is_active: Boolean(formData.is_active),
       };
-      const response = await fetch(`http://localhost:8001/api/links/${link.id}`, {
+      const response = await fetch(`https://portal.fmipa.unsulbar.ac.id/api/links/${link.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

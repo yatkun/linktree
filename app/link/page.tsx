@@ -18,7 +18,7 @@ export default function LinkPage() {
 
   const fetchData = async () => {
     setLoading(true);
-    const res = await fetch("http://localhost:8001/api/links", {
+    const res = await fetch("https://portal.fmipa.unsulbar.ac.id/api/links", {
       cache: "no-store",
     });
     const links = await res.json();

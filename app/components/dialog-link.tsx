@@ -41,7 +41,7 @@ export default function DialogLink({ onCreated, data }: { onCreated?: () => void
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8001/api/links", {
+      const response = await fetch("https://portal.fmipa.unsulbar.ac.id/api/links", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
